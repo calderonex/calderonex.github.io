@@ -1,3 +1,4 @@
+import { prefix } from '@/utils/utils';
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 
@@ -16,7 +17,7 @@ export default function ServiceCard({ title, image, onClick }: ServiceCardProps)
       >
         {/* Imagen de fondo */}
         <Image
-          src={image}
+          src={`${prefix}${image}`}
           alt={title}
           layout="fill"
           objectFit="cover"

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
+import { prefix } from "@/utils/utils";
 
 const typingPhrases = [
   "About your project.",
@@ -77,7 +78,7 @@ export default function WeCareSection() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/assets/images/excavator-sunset.jpg"
+          src={`${prefix}/assets/images/excavator-sunset.jpg`}
           alt="We care background"
           fill
           className="object-cover w-full h-full"

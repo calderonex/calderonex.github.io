@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate, useScroll } from "framer-motion";
 import Image from "next/image";
+import { prefix } from "@/utils/utils";
 
 export default function Statistics() {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,7 +62,7 @@ export default function Statistics() {
       >
         <div className="relative w-full h-full">
           <Image
-            src="/assets/images/home-bg-middle-1.jpg"
+            src={`${prefix}/assets/images/home-bg-middle-1.jpg`}
             alt="Background"
             fill
             className="object-cover"

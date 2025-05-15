@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { prefix } from "@/utils/utils";
 
 const texts = [
   "Preparing site...",
@@ -86,7 +87,7 @@ export default function LoadingScreen({ onLoaded }: { onLoaded: () => void }) {
           }}
         >
           <Image
-            src="/assets/images/logo/logo.svg"
+            src={`${prefix}/assets/images/logo/logo.svg`}
             alt="Logo"
             width={280}
             height={280}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; // Heroicons
+import { prefix } from "@/utils/utils";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,7 +59,7 @@ export default function Navbar() {
           <div className={`transition-all duration-300 flex-shrink-0 ${isScrolled ? "pt-0 pl-0" : "pt-0 pl-4"
             }`}>
             <Image
-              src={isScrolled ? "/assets/images/logo/logo-alt.svg" : "/assets/images/logo/logo.svg"}
+              src={isScrolled ? `${prefix}/assets/images/logo/logo-alt.svg` : `${prefix}/assets/images/logo/logo.svg`}
               alt="Logo"
               width={isScrolled ? 160 : 160}  // más pequeño en ambas versiones
               height={isScrolled ? 48 : 48}

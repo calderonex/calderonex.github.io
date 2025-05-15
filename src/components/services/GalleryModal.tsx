@@ -7,6 +7,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { ArrowLeftIcon, ArrowRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { prefix } from '@/utils/utils';
 
 interface GalleryModalProps {
   isOpen: boolean;
@@ -88,14 +89,14 @@ export default function GalleryModal({ isOpen, onClose, images }: GalleryModalPr
               >
                 {isVideo(src) ? (
                   <video
-                    src={src}
+                    src={`${prefix}${src}`}
                     controls
                     className="w-full h-full object-contain rounded-lg"
                     onClick={(e) => e.stopPropagation()}
                   />
                 ) : (
                   <Image
-                    src={src}
+                    src={`${prefix}${src}`}
                     alt={`Gallery image ${index + 1}`}
                     layout="fill"
                     objectFit="contain"
