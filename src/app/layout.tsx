@@ -1,6 +1,6 @@
 // app/layout.tsx
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google"; // Puedes cambiar por otra fuente más adelante
 
 const geist = Geist({
@@ -52,7 +52,10 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
-  themeColor: "#F97316", // tu color primario (ej: naranja)
+};
+
+export const viewport: Viewport = {
+  themeColor: "--color-primary", // tu color primario (naranja)
 };
 
 export default function RootLayout({
