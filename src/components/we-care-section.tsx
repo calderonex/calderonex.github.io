@@ -96,7 +96,7 @@ export default function WeCareSection() {
           style={{
             backgroundImage: `
       linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0)),
-      url('/assets/images/excavator-sunset.jpg')
+      url('${prefix}/assets/images/excavator-sunset.jpg')
     `,
           }}
         >

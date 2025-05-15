@@ -10,6 +10,7 @@ import 'swiper/css/autoplay';
 import './Banner.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/solid';
 import ContactSection from './Description';
+import { prefix } from '@/utils/utils';
 
 const images = [
  
@@ -60,7 +61,7 @@ export default function Banner() {
             <SwiperSlide key={index}>
               <div
                 className={`h-screen bg-cover bg-center bannerImage`}
-                style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 120px), url(${image.src})` }}
+                style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 120px), url(${prefix}${image.src})` }}
               >
                 <motion.div
                   className="relative z-10 flex flex-col items-center justify-center h-full text-white p-24"

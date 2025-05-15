@@ -1,4 +1,5 @@
 // app/layout.tsx
+import { prefix } from "@/utils/utils";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google"; // Puedes cambiar por otra fuente más adelante
@@ -47,11 +48,11 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
+    icon: `${prefix}/favicon.ico`,
+    shortcut: `${prefix}/favicon-32x32.png`,
+    apple: `${prefix}/apple-touch-icon.png`,
   },
-  manifest: "/site.webmanifest",
+  manifest: `${prefix}/site.webmanifest`,
 };
 
 export const viewport: Viewport = {
