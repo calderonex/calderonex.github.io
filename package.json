@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "static": "next build && next export -o dist",
-    "deploy": "gh-pages -d out"
+    "static": "next build && next export",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
