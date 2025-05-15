@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
+import Image from "next/image";
 
 const typingPhrases = [
   "About your project.",
@@ -75,10 +76,11 @@ export default function WeCareSection() {
         transition={{ duration: 4, ease: "easeInOut" }}
         className="absolute inset-0 z-0"
       >
-        <img
+        <Image
           src="/assets/images/excavator-sunset.jpg"
           alt="We care background"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover w-full h-full"
         />
         <div className="absolute inset-0 bg-black/80" />
       </motion.div>

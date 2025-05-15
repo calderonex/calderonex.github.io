@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate, useScroll } from "framer-motion";
+import Image from "next/image";
 
 export default function Statistics() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,11 +59,15 @@ export default function Statistics() {
         className="absolute top-0 left-0 w-full h-[150%] z-0"
         style={{ y: yBackground }}
       >
-        <img
-          src="/assets/images/home-bg-middle-1.jpg"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src="/assets/images/home-bg-middle-1.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority // opcional: carga prioritaria si es visible al cargar
+          />
+        </div>
         <div className="absolute inset-0 bg-black/10" />
       </motion.div>
 
