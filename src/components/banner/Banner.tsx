@@ -7,7 +7,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import './banner.css';
+import './Banner.css';
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/solid';
 import ContactSection from './Description';
 
