@@ -1,1 +1,1 @@
-export const prefix = process.env.NODE_ENV === 'production' ? '/website' : '';
+export const prefix = process.env.NODE_ENV === 'production' ? '' : '';
