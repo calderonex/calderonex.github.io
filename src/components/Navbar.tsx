@@ -56,56 +56,59 @@ export default function Navbar() {
       >
         <div className="w-full flex items-start justify-between px-4 pt-2">
           {/* Logo dinámico con tamaño ajustable */}
-          <div className={`transition-all duration-300 flex-shrink-0 ${isScrolled ? "pt-0 pl-0" : "pt-0 pl-4"
-            }`}>
+          <div
+            className={`transition-all duration-300 flex-shrink-0 
+    ${isScrolled ? "w-32 md:w-40" : "w-40 md:w-48"}
+  `}
+          >
             <Image
               src={isScrolled ? `${prefix}/assets/images/logo/logo-alt.svg` : `${prefix}/assets/images/logo/logo.svg`}
               alt="Logo"
-              width={isScrolled ? 160 : 160}  // más pequeño en ambas versiones
-              height={isScrolled ? 48 : 48}
-              className="object-contain"
+              width={200}
+              height={60}
+              className="object-contain w-full h-auto"
               priority
             />
           </div>
 
 
+
+
           {/* Menú normal en pantallas grandes */}
           <ul className="hidden md:flex space-x-8 text-sm items-center">
-  {[
-    { name: "Home", id: "banner" },
-    { name: "Our Work", id: "our-work" },
-    { name: "Services", id: "services" },
+            {[
+              { name: "Home", id: "banner" },
+              { name: "Our Work", id: "our-work" },
+              { name: "Services", id: "services" },
 
-    { name: "Contact", id: "contact", isButton: true },
-  ].map(({ name, id, isButton }) => (
-    <li key={id}>
-      <Link
-        href={`#${id}`}
-        onClick={(e) => {
-          e.preventDefault();
-          handleLinkClick(id);
-        }}
-        className={`transition-all duration-300 ${
-          isButton
-            ? `px-6 py-3 border text-lg ${
-                isScrolled
-                  ? "border-black text-black hover:bg-primary hover:text-white hover:border-primary"
-                  : "border-white text-white hover:bg-primary hover:text-white hover:border-primary"
-              }`
-            : `
+              { name: "Contact", id: "contact", isButton: true },
+            ].map(({ name, id, isButton }) => (
+              <li key={id}>
+                <Link
+                  href={`#${id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(id);
+                  }}
+                  className={`transition-all duration-300 ${isButton
+                      ? `px-6 py-3 border text-lg ${isScrolled
+                        ? "border-black text-black hover:bg-primary hover:text-white hover:border-primary"
+                        : "border-white text-white hover:bg-primary hover:text-white hover:border-primary"
+                      }`
+                      : `
               relative text-base font-medium px-2 py-1
               transition-colors duration-300 
               ${isScrolled ? "text-black" : "text-white"} 
               hover:text-primary
               ${activeLink === id ? "text-primary font-semibold border-b-2 border-primary" : ""}
             `
-        }`}
-      >
-        {name}
-      </Link>
-    </li>
-  ))}
-</ul>
+                    }`}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
 
           {/* Botón de menú hamburguesa en pantallas pequeñas */}

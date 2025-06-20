@@ -70,7 +70,8 @@ export default function GalleryModal({ isOpen, onClose, images }: GalleryModalPr
             prevEl: '.swiper-button-prev'
           }}
           style={{
-            '--swiper-navigation-color': 'var(--color-primary)',} as React.CSSProperties}
+            '--swiper-navigation-color': 'var(--color-primary)',
+          } as React.CSSProperties}
           modules={[Navigation]}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="relative"
@@ -80,9 +81,8 @@ export default function GalleryModal({ isOpen, onClose, images }: GalleryModalPr
             <SwiperSlide key={index}>
               <div
                 onClick={() => toggleZoom(index, isVideo(src))}
-                className={`relative w-full h-[80vh] transition-transform duration-300 ${
-                  zoomedIndex === index ? 'scale-150' : 'scale-100'
-                }`}
+                className={`relative w-full h-[80vh] transition-transform duration-300 ${zoomedIndex === index ? 'scale-150' : 'scale-100'
+                  }`}
                 style={{
                   cursor: isVideo(src) ? 'default' : 'zoom-in'
                 }}
@@ -95,13 +95,14 @@ export default function GalleryModal({ isOpen, onClose, images }: GalleryModalPr
                     onClick={(e) => e.stopPropagation()}
                   />
                 ) : (
-                  <Image
-                    src={`${prefix}${src}`}
-                    alt={`Gallery image ${index + 1}`}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-lg"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={`${prefix}${src}`}
+                      alt={`Gallery image ${index + 1}`}
+                      fill
+                      className="object-contain rounded-lg"
+                    />
+                  </div>
                 )}
               </div>
             </SwiperSlide>

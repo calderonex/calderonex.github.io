@@ -1,37 +1,55 @@
-/* Estilos para las flechas de navegación */
 .navigationButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la visibilidad */
-    border-radius: 50%;
-    padding: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Fondo por defecto */
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigationButton:hover {
+  transform: translateY(-50%) scale(1.2);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navigationButtonNext {
+  right: 20px;
+}
+
+.navigationButtonPrev {
+  left: 20px;
+}
+
+.navigationButton svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+/* ✅ SOLO EN MÓVIL: quitar fondo, borde redondeado y padding */
+@media (max-width: 767px) {
+  .navigationButton {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
   }
-  
+
   .navigationButton:hover {
-    transform: translateY(-50%) scale(1.2); /* Aumenta el tamaño de las flechas con el hover */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al hacer hover */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave para darle profundidad */
+    background-color: transparent;
+    box-shadow: none;
   }
-  
-  .navigationButtonNext {
-    right: 20px;
-  }
-  
-  .navigationButtonPrev {
-    left: 20px;
-  }
-  
+
   .navigationButton svg {
-    width: 2rem;
-    height: 2rem; /* Tamaño del icono */
-    fill: white; /* Color blanco */
+    width: 1.5rem;
+    height: 1.5rem;
   }
-  
+}

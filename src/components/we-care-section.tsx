@@ -68,7 +68,7 @@ export default function WeCareSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[90vh] flex flex-col items-center justify-center text-white text-center px-4 overflow-hidden"
+      className="relative h-[70vh] md:h-[90vh] flex flex-col items-center justify-center text-white text-center px-4 overflow-hidden"
     >
       {/* Animated Background Image */}
       <motion.div
@@ -81,7 +81,7 @@ export default function WeCareSection() {
           src={`${prefix}/assets/images/excavator-sunset.jpg`}
           alt="We care background"
           fill
-          className="object-cover w-full h-full"
+          className="object-cover object-center md:object-[center_top] w-full h-full"
         />
         <div className="absolute inset-0 bg-black/80" />
       </motion.div>
@@ -92,7 +92,7 @@ export default function WeCareSection() {
           initial={{ y: "100%" }}
           animate={isInView ? { y: "0%" } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[14vw] leading-none font-extrabold mb-6 text-transparent bg-clip-text bg-cover bg-center drop-shadow-lg"
+          className="text-[14vw] md:text-[8vw] leading-none font-black tracking-tight mb-6 text-transparent bg-clip-text bg-cover bg-center drop-shadow-lg"
           style={{
             backgroundImage: `
       linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0)),
@@ -103,9 +103,8 @@ export default function WeCareSection() {
           WE CARE!
         </motion.h1>
 
-
         <motion.p
-          className="text-xl sm:text-2xl text-white font-light min-h-[2.5rem]"
+          className="text-lg sm:text-2xl text-white font-light min-h-[2.5rem]"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.5, duration: 1 }}

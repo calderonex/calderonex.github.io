@@ -8,7 +8,8 @@ export default function OurWorkSection() {
 
   const galleries = {
     paving: [
-      '/assets/images/concrete/concrete1.jpg',//paving
+      '/assets/images/paving/paving2.jpg',//paving
+      '/assets/images/paving/paving3.jpeg',//paving
 
     ],
     excavation: [
@@ -23,16 +24,24 @@ export default function OurWorkSection() {
       '/assets/images/excavation/excavation9.jpeg',
       '/assets/images/excavation/excavation10blur.jpg', 
       '/assets/images/excavation/excavation11.jpeg',
+      '/assets/images/excavation/excavation12.jpeg',
+      '/assets/images/excavation/excavation13.jpeg',
+      '/assets/images/excavation/excavation14.jpeg',
+      '/assets/images/excavation/excavation15.jpeg',
+      '/assets/images/excavation/excavation16.jpeg',
+      '/assets/images/excavation/excavation17.jpeg',
       '/assets/videos/video.mp4',
     ],
     concrete: [
       '/assets/images/concrete/concrete.jpg',
       '/assets/images/concrete/concrete3.jpeg',
-      '/assets/images/concrete/concrete1.jpg',
       '/assets/images/concrete/concrete4.jpeg',
       '/assets/images/concrete/concrete5.jpeg',
       '/assets/images/concrete/concrete6.jpeg',
       '/assets/images/concrete/concrete7.jpeg',
+      '/assets/images/concrete/concrete8.jpeg',
+      '/assets/images/concrete/concrete9.jpeg',
+      '/assets/images/concrete/concrete10.jpeg',
     ],
   };
 
@@ -69,7 +78,7 @@ export default function OurWorkSection() {
           <div className="w-full max-w-sm">
             <ServiceCard
               title="PAVING"
-              image="/assets/images/concrete/concrete1.jpg"
+              image="/assets/images/paving/paving2.jpg"
               onClick={() => openModal('paving')}
             />
           </div>

@@ -13,15 +13,15 @@ import ContactSection from './Description';
 import { prefix } from '@/utils/utils';
 
 const images = [
- 
+
   {
     src: '/assets/images/excavation/excavation3.jpg',
     title: 'Welcome to Our Company',
-    description: 'We provide the best services in the industry.',//pensar en otra
+    description: 'we’re committed to quality even where it isn’t visible when a home is finished.',//pensar en otra
   },
 
   {
-    src: '/assets/images/paving/paving1.jpeg',
+    src: '/assets/images/concrete/concrete10.jpeg',
     title: 'Quality Services',
     description: 'We ensure the highest quality in all our services.', //pensar otro
   },
@@ -42,7 +42,7 @@ export default function Banner() {
   //we care
   return (
     <>
-      <section id="banner" className="relative h-screen">
+      <section id="banner" className="relative h-[80vh] md:h-screen bg-black overflow-hidden">
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation={{
@@ -60,16 +60,16 @@ export default function Banner() {
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               <div
-                className={`h-screen bg-cover bg-center bannerImage`}
+                className={`h-full bg-cover bg-center bannerImage`}
                 style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 120px), url(${prefix}${image.src})` }}
               >
                 <motion.div
-                  className="relative z-10 flex flex-col items-center justify-center h-full text-white p-24"
+                  className="relative z-10 flex flex-col items-center justify-center h-full text-white px-6 py-16 md:p-24 pt-20 md:pt-32"
                   initial={{ y: 50, opacity: 0 }}
                   animate={activeIndex === index ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="bg-black/30 px-3 py-4 shadow-2xl max-w-3xl text-center">
+                  <div className="bg-black/30 px-3 py-4 shadow-2xl max-w-md md:max-w-3xl text-center mt-4 md:mt-6">
                     <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-sm">
                       {image.title}
                     </h1>
@@ -91,12 +91,13 @@ export default function Banner() {
         </Swiper>
 
         {/* Flechas de navegación */}
-        <div className="navigationButton navigationButtonNext">
-          <ChevronRightIcon className="w-8 h-8 text-white" />
-        </div>
-        <div className="navigationButton navigationButtonPrev">
-          <ChevronLeftIcon className="w-8 h-8 text-white" />
-        </div>
+<div className="navigationButton navigationButtonNext">
+  <ChevronRightIcon className="w-4 h-4 md:w-8 md:h-8 text-white" />
+</div>
+<div className="navigationButton navigationButtonPrev">
+  <ChevronLeftIcon className="w-4 h-4 md:w-8 md:h-8 text-white" />
+</div>
+
       </section>
 
       <ContactSection />
