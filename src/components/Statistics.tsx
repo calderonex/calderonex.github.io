@@ -22,8 +22,7 @@ export default function Statistics() {
   });
 
   // Que el fondo se mueva bastante: cuanto más negativo, más se nota
-  const yBackground = useTransform(scrollYProgress, [0, 1], [0, -300]);
-
+  const yBackground = useTransform(scrollYProgress, [0, 1], [0, -150]);
   useEffect(() => {
     const currentRef = sectionRef.current;
     const observer = new IntersectionObserver(
@@ -53,8 +52,7 @@ export default function Statistics() {
     <section
       id="statistics"
       ref={sectionRef}
-      className="relative overflow-hidden min-h-[90vh] pt-24"
-    >
+      className="relative overflow-hidden min-h-[50vh] md:min-h-[70vh] pt-16 md:pt-24"    >
       {/* Fondo Parallax */}
       <motion.div
         className="absolute top-0 left-0 w-full h-[150%] z-0"
@@ -65,16 +63,16 @@ export default function Statistics() {
             src={`${prefix}/assets/images/home-bg-middle-1.jpg`}
             alt="Background"
             fill
-            className="object-cover"
-            priority // opcional: carga prioritaria si es visible al cargar
+            className="object-cover object-[center_left] md:object-center"
           />
+
         </div>
         <div className="absolute inset-0 bg-black/10" />
       </motion.div>
 
       {/* Contenido */}
-      <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center justify-end text-white pb-32 pt-12 px-10 md:px-32">
-        <div className="w-full md:w-1/2 text-right">
+      <div className="relative z-10 container mx-auto flex flex-col md:flex-row items-center md:items-end justify-center md:justify-end text-white pb-20 pt-8 px-6 md:pb-32 md:pt-12 md:px-32">
+        <div className="w-full md:w-1/2 text-center md:text-right">
           <h2 className="text-5xl font-bold mb-6">CALDERON SPECIALISTS</h2>
           <div className="flex flex-row justify-end items-end space-x-12">
             <div className="flex flex-col items-center">

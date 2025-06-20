@@ -92,7 +92,7 @@ export default function WeCareSection() {
           initial={{ y: "100%" }}
           animate={isInView ? { y: "0%" } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[14vw] md:text-[8vw] leading-none font-black tracking-tight mb-6 text-transparent bg-clip-text bg-cover bg-center drop-shadow-lg"
+          className="text-[18vw] md:text-[8vw] leading-none font-black tracking-tight mb-6 text-transparent bg-clip-text bg-cover bg-center drop-shadow-lg"
           style={{
             backgroundImage: `
       linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0)),

@@ -54,11 +54,11 @@ export default function Navbar() {
           : "bg-transparent text-white py-6"
           }`}
       >
-        <div className="w-full flex items-start justify-between px-4 pt-2">
+<div className="w-full flex items-center md:items-start justify-between px-4 pt-2">
           {/* Logo dinámico con tamaño ajustable */}
           <div
             className={`transition-all duration-300 flex-shrink-0 
-    ${isScrolled ? "w-32 md:w-40" : "w-40 md:w-48"}
+    ${isScrolled ? "w-40 md:w-40" : "w-40 md:w-48"}
   `}
           >
             <Image
